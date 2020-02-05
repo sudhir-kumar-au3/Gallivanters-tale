@@ -1,0 +1,49 @@
+// variables: 
+$body-bg: linear-gradient(45deg, #f200ff 0%, #ffba42 100%);
+$button-bg: #ffba42;
+$input-border:  0 0 1px;
+$error-color: red;
+$input-border: lightgrey;
+
+//scss
+.signup-page{
+    height: 100vh;
+    width: 100vw;
+    background: $body-bg;
+}
+input{
+    width: 100%;
+    outline: 0;
+    border-width: 0 0 1px;
+    border-color: $input-border;
+    &:focus{
+        border-color: black;
+    }
+    &::placeholder{
+        font-size: small;
+        font-weight: lighter;
+    }
+    &.error{
+        border-color: $error-color;
+    }
+}
+
+.btn{
+    background: #fff;
+    border: 1px solid $button-bg;
+    color: $button-bg;
+    transition: all 0.25s ease;
+    &:hover{
+        color: white;
+        background: $button-bg;
+    }
+}
+.signup-form-wrapper{
+    border-radius: 20px;
+    box-shadow: 0 15px 16.83px 0.17px rgba(0,0,0,.1);
+}
+.errorMessage {
+    color: $error-color;
+    font-size: 0.75em;
+  }
+
