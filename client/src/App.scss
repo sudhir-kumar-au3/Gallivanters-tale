@@ -1,13 +1,12 @@
 // variables: 
 $body-bg: linear-gradient(45deg, #f200ff 0%, #ffba42 100%);
-$button-bg: #ffba42;
 $input-border:  0 0 1px;
 $error-color: red;
 $input-border: lightgrey;
 
 //scss
 .signup-page{
-    height: 100vh;
+    height: fit-content;
     width: 100vw;
     background: $body-bg;
 }
@@ -28,14 +27,28 @@ input{
     }
 }
 
+@mixin button-bg($bg) {
+    background: $bg;
+    &:hover {
+      background:darken($bg,16%);
+      transition: all 0.45s ease;
+    }
+    &:active {
+      background:darken($bg,25%);
+    } 
+  }
 .btn{
-    background: #fff;
-    border: 1px solid $button-bg;
-    color: $button-bg;
-    transition: all 0.25s ease;
+    @include button-bg(#ffba42);
+}
+.password-trigger{
+    position: absolute;
+    top: 50%;
+    right: .5rem;
+    margin-right: 45px;
+    z-index: 9999;
+    user-select: none;
     &:hover{
-        color: white;
-        background: $button-bg;
+        cursor: pointer;
     }
 }
 .signup-form-wrapper{
@@ -44,6 +57,12 @@ input{
 }
 .errorMessage {
     color: $error-color;
-    font-size: 0.75em;
+    font-size: xx-small;
   }
 
+@media screen and (min-width: 1367px){
+    .signup-page{
+        height: 100vh;
+    }
+    
+}

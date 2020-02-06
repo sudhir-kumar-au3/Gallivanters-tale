@@ -35,6 +35,13 @@ function SignupForm() {
 
     const [formData, setFormData] = useState(userData);
     const [formErrors, setFormErrors] = useState(errors);
+    const [passShow, setPassShow] = useState({ hidden: true })
+    const [toggleBtn, setToggleBtn] = useState(false)
+
+    const toggleShow = () => {
+        setPassShow({...passShow, hidden: !passShow.hidden});
+        setToggleBtn(!toggleBtn);
+    }
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -88,11 +95,7 @@ function SignupForm() {
         setFormErrors({...formErrors});
     }  
     return (
-        <div className='container-fluid signup-page p-4'>
-            <div className='row mt-5'>
-            <div className='col-md-2'></div>   
-            <div className='col-md-8'>
-            <div className='row signup-form-wrapper p-md-2 mt-md-5 bg-white'>
+            <div className='row signup-form-wrapper p-md-2 m-md-5 bg-white'>
                 <div className='col-md-6 p-5'>
                     <h1 className='font-weight-bolder'>Sign Up</h1><br></br>
                     <form onSubmit = {handleSubmit}>
@@ -148,11 +151,12 @@ function SignupForm() {
                             <label htmlFor='password'><i class="icon ion-md-lock"></i></label>
                             <input 
                             className = {formErrors.password.length > 0 ? "error": null}
-                            type='password' 
+                            type = {passShow.hidden ? "password" : "text"}
                             name='password' 
                             placeholder='Password'
                             onChange={handleChange}
                             ></input>
+                            <span className="password-trigger mt-4" onClick={toggleShow}>{toggleBtn? (<i class="icon ion-md-eye-off"></i>): (<i class="icon ion-md-eye"></i>)}</span>
                             {formErrors.password.length > 0 && (
                                    <span className="errorMessage">{formErrors.password}</span>
                                 )}
@@ -171,7 +175,7 @@ function SignupForm() {
                                 )}
                         </div>
                         <div className='form-group'>
-                            <button className='btn rounded-pill mt-1' type='submit'>Register</button>
+                            <button className='btn rounded mt-1' type='submit'>Register</button>
                         </div>
 
 
@@ -186,10 +190,7 @@ function SignupForm() {
                         <a className='text-dark' href="#"><u>I am already member</u></a>
                     </div>
                 </div>
-            </div></div>
-            <div className='col-md-2'></div>
             </div>
-        </div>
     )
 }
 
