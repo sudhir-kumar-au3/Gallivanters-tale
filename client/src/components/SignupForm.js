@@ -181,12 +181,12 @@ function SignupForm() {
 
                     </form>
                 </div>
-                <div className='col-md-6 p-5'>
-                    <div className='container'>
+                <div className='col-md-6 p-md-5'>
+                    <div className='container mt-md-5'>
                     <img className='embed-responsive' src='https://colorlib.com/etc/regform/colorlib-regform-7/images/signup-image.jpg' alt='signup-img'></img>
                     </div>
                     <br></br>
-                    <div className='text-center'>
+                    <div className='text-center m-3'>
                         <a className='text-dark' href="#"><u>I am already member</u></a>
                     </div>
                 </div>
