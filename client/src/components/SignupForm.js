@@ -102,7 +102,7 @@ function SignupForm() {
                         <div className='row'>
                             <div className='col-md-6'>
                                <div className='form-group'>
-                                <label htmlFor='firstName'><i class="icon ion-md-person"></i></label>
+                                <label htmlFor='firstName'><i className="icon ion-md-person"></i></label>
                                 <input 
                                 className = {formErrors.firstName.length > 0 ? "error": null}
                                 type='text' 
@@ -118,7 +118,7 @@ function SignupForm() {
                             </div>
                             <div className='col-md-6'>
                                <div className='form-group'>
-                                <label htmlFor='lastName'><i class="icon ion-md-person"></i></label>
+                                <label htmlFor='lastName'><i className="icon ion-md-person"></i></label>
                                 <input 
                                 className = {formErrors.lastName.length > 0 ? "error": null}
                                 type='text' 
@@ -135,7 +135,7 @@ function SignupForm() {
 
                         </div>
                         <div className='form-group'>
-                            <label htmlFor='email'><i class="icon ion-md-mail"></i></label>
+                            <label htmlFor='email'><i className="icon ion-md-mail"></i></label>
                             <input 
                             className = {formErrors.email.length > 0 ? "error": null}
                             type='email' 
@@ -148,7 +148,7 @@ function SignupForm() {
                                 )}
                         </div>
                         <div className='form-group'>
-                            <label htmlFor='password'><i class="icon ion-md-lock"></i></label>
+                            <label htmlFor='password'><i className="icon ion-md-lock"></i></label>
                             <input 
                             className = {formErrors.password.length > 0 ? "error": null}
                             type = {passShow.hidden ? "password" : "text"}
@@ -156,13 +156,13 @@ function SignupForm() {
                             placeholder='Password'
                             onChange={handleChange}
                             ></input>
-                            <span className="password-trigger mt-4" onClick={toggleShow}>{toggleBtn? (<i class="icon ion-md-eye-off"></i>): (<i class="icon ion-md-eye"></i>)}</span>
+                            <span className="password-trigger mt-4" onClick={toggleShow}>{toggleBtn? (<i className="icon ion-md-eye-off"></i>): (<i className="icon ion-md-eye"></i>)}</span>
                             {formErrors.password.length > 0 && (
                                    <span className="errorMessage">{formErrors.password}</span>
                                 )}
                         </div>
                         <div className='form-group'>
-                            <label htmlFor='cPass'><i class="icon ion-md-lock"></i></label>
+                            <label htmlFor='cPass'><i className="icon ion-md-lock"></i></label>
                             <input 
                             className = {formErrors.cPass.length > 0 ? "error": null}
                             type='password' 
