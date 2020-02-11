@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const {addCreator} = require('../controllers/creatorCtrl')
+const {addCreator, creatorLogin} = require('../controllers/creatorCtrl')
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -8,5 +8,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/addcreator', addCreator);
+
+router.post('/login', creatorLogin);
 
 module.exports = router;

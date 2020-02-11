@@ -34,9 +34,10 @@ const Creator = db.sequelize.define('creator', {
         }
     }
     );
-    Creator.prototype.validatePassword = (password) => {
-        return bcrypt.compareSync(password, this.password);
-    }
+    // Creator.prototype.validatePassword = (password) => {
+    //     console.log("password-in-login: ", password);
+    //     return bcrypt.compareSync(password, this.password);
+    // }
     Creator.associate = (models) => {
         Creator.hasMany(models.BlogPost,{
             foreignKey: "creatorId",
