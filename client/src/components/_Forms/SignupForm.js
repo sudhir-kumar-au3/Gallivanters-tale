@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import {emailRegex, nameRegex, passwordRegex} from '../utils/validations'
-import {stateMapper} from '../redux/store/store';
+import {emailRegex, nameRegex, passwordRegex} from '../../utils/validations'
+import {stateMapper} from '../../redux/store/store';
 import {connect} from 'react-redux';
 const formValid = (formErrors, formData) => {
     let valid = true;
@@ -57,13 +57,14 @@ function SignupForm(props) {
                     password: formData.password
                 }
             })
-          console.log(`
-            --SUBMITTING--
-            First Name: ${formData.firstName}
-            Last Name: ${formData.lastName}
-            Email: ${formData.email}
-            Password: ${formData.password}
-          `);
+            // props.history.push('/login')
+        //   console.log(`
+        //     --SUBMITTING--
+        //     First Name: ${formData.firstName}
+        //     Last Name: ${formData.lastName}
+        //     Email: ${formData.email}
+        //     Password: ${formData.password}
+        //   `);
         } else {
           alert("FORM INVALID");
         }
@@ -119,6 +120,8 @@ function SignupForm(props) {
                                 name='firstName'
                                 placeholder='Your First Name'
                                 onChange={handleChange}
+                                required
+
                                 ></input>
                                 {formErrors.firstName.length > 0 && (
                                    <span className="errorMessage">{formErrors.firstName}</span>
@@ -135,6 +138,7 @@ function SignupForm(props) {
                                 name='lastName' 
                                 placeholder='Your Last Name'
                                 onChange={handleChange}
+                                required
                                 ></input>
                                 {formErrors.lastName.length > 0 && (
                                    <span className="errorMessage">{formErrors.lastName}</span>
@@ -152,6 +156,7 @@ function SignupForm(props) {
                             name='email' 
                             placeholder='Your Email'
                             onChange={handleChange}
+                            required
                             ></input>
                             {formErrors.email.length > 0 && (
                                    <span className="errorMessage">{formErrors.email}</span>
@@ -165,6 +170,7 @@ function SignupForm(props) {
                             name='password' 
                             placeholder='Password'
                             onChange={handleChange}
+                            required
                             ></input>
                             <span className="password-trigger mt-4" onClick={toggleShow}>{toggleBtn? (<i className="icon ion-md-eye-off"></i>): (<i className="icon ion-md-eye"></i>)}</span>
                             {formErrors.password.length > 0 && (
@@ -179,6 +185,7 @@ function SignupForm(props) {
                             name='cPass' 
                             placeholder='Repeat Password'
                             onChange={handleChange}
+                            required
                             ></input>
                             {formErrors.cPass.length > 0 && (
                                    <span className="errorMessage">{formErrors.cPass}</span>
