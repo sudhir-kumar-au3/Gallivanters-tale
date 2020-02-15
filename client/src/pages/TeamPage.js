@@ -1,13 +1,13 @@
 import React from 'react'
 import Header from '../components/_Header/index'
 
-function ArticlesPage() {
+function TeamPage() {
     return (
         <React.Fragment>
-            <Header></Header>
-            Article Page
+            <Header breadName='About' linkName='Team'></Header>
+            Team Page
         </React.Fragment>
     )
 }
 
-export default ArticlesPage
+export default TeamPage

@@ -32,6 +32,11 @@ $input-border: lightgrey;
 .container {
     max-width: 1210px;
 }
+
+.activeClassName{
+    font-weight: bolder;
+    color: #ffd369;
+}
 // input fields
 input{
     width: 100%;
