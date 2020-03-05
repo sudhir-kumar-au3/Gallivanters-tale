@@ -1,11 +1,8 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import NavBar from './HeaderComponent/NavBar';
 import '../../assets/header.scss';
 import SubHeader from './HeaderComponent/SubHeader';
 function Header(props) {
-    useEffect(() => {
-        console.log('mounted: ',props)
-    }, [])
     return (
         <React.Fragment>
             <NavBar></NavBar>

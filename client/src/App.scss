@@ -173,6 +173,35 @@ input,textarea{
     padding: 7em 0;
     position: relative;
 }
+.case {
+    width: 100%;
+    margin-bottom: 50px;
+}
+.case .img {
+    height: 400px;
+}
+.case .text h2 {
+    color: #000;
+}
+.case .text h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.case .text .media-social li {
+    list-style: none;
+    margin: 0 5px 0 0;
+    display: inline-block;
+}
+.icon-share:hover{
+    background: #ffd369;
+    border-radius: 5px;
+}
+@media (max-width: 1199.98px){
+.case .text .media-social {
+    opacity: 1;
+}
+}
 @media screen and (min-width: 1367px){
     .signup-page{
         height: 100vh;
