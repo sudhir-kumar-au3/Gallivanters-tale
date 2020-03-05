@@ -3,7 +3,7 @@ import {NavLink , Link } from 'react-router-dom'
 function NavBar() {
     return (
 <React.Fragment>
-            <nav className="navbar navbar-default  ftco-navbar-light navbar-expand-lg navbar-light bg-dark">
+            <nav className="navbar navbar-default sticky-top  ftco-navbar-light navbar-expand-lg navbar-light bg-dark">
     <div className='container'>
   <Link className="navbar-brand text-white font-weight-bolder" to="/">Gallivanter's <i>Tale</i></Link>
   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

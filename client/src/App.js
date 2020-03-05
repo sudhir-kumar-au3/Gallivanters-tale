@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import { Route, NavLink, BrowserRouter as Router, Switch} from 'react-router-dom'
+import { Route, BrowserRouter as Router, Switch} from 'react-router-dom'
 
 // import CreatorSignup from './pages/CreatorSignup';
 import HomePage from './pages/HomePage';
@@ -8,7 +8,7 @@ import ArticlesPage from './pages/ArticlesPage'
 import TeamPage from './pages/TeamPage';
 import ContactPage from './pages/ContactPage'
 
-function App() {
+function App(props) {
   return (
     <div className="App">
       <Router>
