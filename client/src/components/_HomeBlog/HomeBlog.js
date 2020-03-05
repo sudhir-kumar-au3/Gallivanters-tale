@@ -21,35 +21,53 @@ function HomeBlog(props, { url = String(window.location) }) {
                 <div className="case" key={blog.blogId}>
                   <div className="row">
                     <div className="col-md-6 col-lg-6 col-xl-8 d-flex">
-                    <Link to={`/articles/${blog.blogId}`}>
-                      <img
-                        src={blog.cover}
-                        className="img w-100 mb-3 mb-md-0"
-                      ></img></Link>
+                      <Link to={`/articles/${blog.blogId}`}>
+                        <img
+                          src={blog.cover}
+                          className="img w-100 mb-3 mb-md-0"
+                        ></img>
+                      </Link>
                     </div>
                     <div className="col-md-6 col-lg-6 col-xl-4 d-flex">
                       <div className="text w-100 pl-md-3">
-                      <Link to={`/articles/${blog.blogId}`} style={{'text-decoration': 'none'}}><h2 className="text-capitalize">{blog.title}</h2></Link>
+                        <Link
+                          to={`/articles/${blog.blogId}`}
+                          style={{ "text-decoration": "none" }}
+                        >
+                          <h2 className="text-capitalize">{blog.title}</h2>
+                        </Link>
                         <ul className="media-social list-unstyled">
                           <li>
                             <FacebookShareButton
                               url={`${url}/articles/${blog.blogId}`}
                             >
-                              <img className='icon-share' src="https://img.icons8.com/nolan/64/facebook.png" alt='facebook'></img>
+                              <img
+                                className="icon-share"
+                                src="https://img.icons8.com/nolan/64/facebook.png"
+                                alt="facebook"
+                              ></img>
                             </FacebookShareButton>
                           </li>
                           <li>
                             <LinkedinShareButton
                               url={`${url}/articles/${blog.blogId}`}
                             >
-                              <img className='icon-share' src="https://img.icons8.com/nolan/64/linkedin.png" alt='linkedin'></img>
+                              <img
+                                className="icon-share"
+                                src="https://img.icons8.com/nolan/64/linkedin.png"
+                                alt="linkedin"
+                              ></img>
                             </LinkedinShareButton>
                           </li>
                           <li>
                             <TwitterShareButton
                               url={`${url}/articles/${blog.blogId}`}
                             >
-                              <img className='icon-share' src="https://img.icons8.com/nolan/64/twitter-squared.png" alt='twitter'></img>
+                              <img
+                                className="icon-share"
+                                src="https://img.icons8.com/nolan/64/twitter-squared.png"
+                                alt="twitter"
+                              ></img>
                             </TwitterShareButton>
                           </li>
                         </ul>

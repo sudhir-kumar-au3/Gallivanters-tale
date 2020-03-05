@@ -197,6 +197,10 @@ input,textarea{
     background: #ffd369;
     border-radius: 5px;
 }
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
 @media (max-width: 1199.98px){
 .case .text .media-social {
     opacity: 1;
