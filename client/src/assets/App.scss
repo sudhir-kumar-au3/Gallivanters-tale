@@ -35,7 +35,7 @@ $input-border: lightgrey;
 
 .activeClassName{
     font-weight: bolder;
-    color: #ffd369;
+    color: #ffd369 !important;
 }
 // input fields
 input,textarea{
@@ -200,6 +200,12 @@ input,textarea{
 .no-gutters {
     margin-right: 0;
     margin-left: 0;
+}
+.blog-title:hover{
+    color: gray !important;
+}
+.cover-img:hover{
+    filter: brightness(90%) !important;
 }
 @media (max-width: 1199.98px){
 .case .text .media-social {

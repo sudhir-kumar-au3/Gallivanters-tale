@@ -13,7 +13,7 @@ module.exports = (sequelize, datatype) => {
         },
         cover: {
             type: datatype.STRING,
-            defaultValue: "https://cdn.pixabay.com/photo/2016/01/09/18/28/old-1130743_960_720.jpg",
+            defaultValue: "https://cdn.pixabay.com/photo/2017/10/23/05/56/holiday-2880261_960_720.jpg",
             
         },
         userId: {

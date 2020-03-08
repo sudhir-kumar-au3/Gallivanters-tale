@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../components/_Header/index'
 import BlogEditor from '../components/_BlogEditor/BlogEditor'
 import { Link } from 'react-router-dom'
+import Footer from '../components/_Footer/Footer'
 
 function TeamPage() {
     return (
@@ -12,6 +13,7 @@ function TeamPage() {
             <Link to ='/signup'><button className='btn'>Click Here to Register</button></Link>
 
             </div>
+            <Footer></Footer>
             {/* <BlogEditor></BlogEditor> */}
         </React.Fragment>
     )
