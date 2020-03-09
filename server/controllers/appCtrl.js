@@ -15,7 +15,9 @@ const getAllBlog = (req,res) =>{
             order: [['updatedAt', 'DESC']]
         })
         .then(data => {
-            res.json(data)
+            if(data.length > 0)
+                res.json(data)
+            else res.json("error: no response")
         })
         .catch(error => {
             res.status(500).json({error: error.message})

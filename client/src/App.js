@@ -17,8 +17,8 @@ function App(props) {
       <Router>
         <Switch>
           <Route exact path='/'><HomePage></HomePage></Route>
-          <Route path='/articles'><ArticlesPage></ArticlesPage></Route>
-          <Route path='/articles/:blogId'><SingleArticle></SingleArticle></Route>
+          <Route path='/blogs'><ArticlesPage></ArticlesPage></Route>
+          <Route path='/blogs/:blogId'><SingleArticle></SingleArticle></Route>
           <Route path='/team'><TeamPage></TeamPage></Route>
           <Route path='/contact'><ContactPage></ContactPage></Route>
           <Route path = '/signup'><CreatorSignup></CreatorSignup></Route>

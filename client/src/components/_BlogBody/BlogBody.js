@@ -13,7 +13,7 @@ function BlogBody(props) {
             return (
               <div className="col-md-4 float-right d-flex" key={blog.blogId}>
                 <div className="blog-entry justify-content-end">
-                  <Link to={`/articles/${blog.blogId}`}>
+                  <Link to={`/blogs/${blog.blogId}`}>
                     <img
                       src={blog.cover}
                       className="block-20 embed-responsive"
@@ -29,7 +29,7 @@ function BlogBody(props) {
                     <Link
                       className="text-dark"
                       style={{ "text-decoration": "none" }}
-                      to={`/articles/${blog.blogId}`}
+                      to={`/blogs/${blog.blogId}`}
                     >
                       <h3 className="heading mb-3 text-capitalize">
                         {blog.title}
@@ -39,7 +39,7 @@ function BlogBody(props) {
                     <p>
                       <Link
                         className="btn-custom"
-                        to={`/articles/${blog.blogId}`}
+                        to={`/blogs/${blog.blogId}`}
                       >
                         <ion-icon name="chevron-forward-outline"></ion-icon>
                         &nbsp;&nbsp;

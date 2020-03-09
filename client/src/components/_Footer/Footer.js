@@ -58,7 +58,7 @@ function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link className="py-1 d-block text-light" to="/articles">
+                  <Link className="py-1 d-block text-light" to="/blogs">
                     <ion-icon name="chevron-forward-outline"></ion-icon>{" "}
                     Articles
                   </Link>

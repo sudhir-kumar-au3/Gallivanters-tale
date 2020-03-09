@@ -21,7 +21,7 @@ function HomeBlog(props, { url = String(window.location) }) {
                 <div className="case" key={blog.blogId}>
                   <div className="row">
                     <div className="col-md-6 col-lg-6 col-xl-8 d-flex">
-                      <Link to={`/articles/${blog.blogId}`}>
+                      <Link to={`/blogs/${blog.blogId}`}>
                         <img
                           src={blog.cover}
                           className="img cover-img rounded w-100 mb-3 mb-md-0"
@@ -32,7 +32,7 @@ function HomeBlog(props, { url = String(window.location) }) {
                     <div className="col-md-6 col-lg-6 col-xl-4 d-flex">
                       <div className="text w-100 pl-md-3">
                         <Link
-                          to={`/articles/${blog.blogId}`}
+                          to={`/blogs/${blog.blogId}`}
                           style={{ "text-decoration": "none" }}
                         >
                           <h2 className="text-capitalize blog-title">{blog.title}</h2>
@@ -41,7 +41,7 @@ function HomeBlog(props, { url = String(window.location) }) {
                         <ul className="media-social mt-md-3 list-unstyled">
                           <li>
                             <FacebookShareButton
-                              url={`${url}/articles/${blog.blogId}`}
+                              url={`${url}/blogs/${blog.blogId}`}
                             >
                               <img
                                 className="icon-share"
@@ -52,7 +52,7 @@ function HomeBlog(props, { url = String(window.location) }) {
                           </li>
                           <li>
                             <LinkedinShareButton
-                              url={`${url}/articles/${blog.blogId}`}
+                              url={`${url}/blogs/${blog.blogId}`}
                             >
                               <img
                                 className="icon-share"
@@ -63,7 +63,7 @@ function HomeBlog(props, { url = String(window.location) }) {
                           </li>
                           <li>
                             <TwitterShareButton
-                              url={`${url}/articles/${blog.blogId}`}
+                              url={`${url}/blogs/${blog.blogId}`}
                             >
                               <img
                                 className="icon-share"

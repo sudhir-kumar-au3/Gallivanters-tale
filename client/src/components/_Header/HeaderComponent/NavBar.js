@@ -16,7 +16,7 @@ function NavBar() {
         <NavLink activeClassName='active' className="nav-link text-white" to="/">Home</NavLink>
       </li>
       <li className="nav-item">
-        <NavLink activeClassName='active' className="nav-link text-white" to="/articles">Articles</NavLink>
+        <NavLink activeClassName='active' className="nav-link text-white" to="/blogs">Articles</NavLink>
       </li>
       <li className="nav-item">
         <NavLink activeClassName='active' className="nav-link text-white" to="/team">Team</NavLink>
