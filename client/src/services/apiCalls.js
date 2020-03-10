@@ -1,11 +1,11 @@
 import baseApi from './baseApi';
 import {store} from '../redux/store/store';
 const addCreator = (formData) =>{
-    console.log("formData: ",formData)
+    // console.log("formData: ",formData)
     baseApi.post(`/creator/addcreator`,formData)
     // .then(data => data.json())
     .then(res =>{
-        console.log("Added-user(API response-): ",res);
+        // console.log("Added-user(API response-): ",res);
         store.dispatch({
             type: "CREATOR_ADDED",
             data: res.data.error ? res.data.error : res.data
@@ -16,10 +16,10 @@ const addCreator = (formData) =>{
     })
 }
 const loginUser = (formData) => {
-    console.log('api-login-data: ', formData)
+    // console.log('api-login-data: ', formData)
     baseApi.post(`/creator/login`, formData)
     .then(res => {
-        console.log("login-data-response: ", res.data);
+        // console.log("login-data-response: ", res.data);
         let user = {
            accessToken: res.data.token
          };
@@ -40,7 +40,7 @@ const fetchUser = () => {
         "Authorization" : `bearer ${token}`
     })
     .then(res => {
-        console.log("userData: ", res.data);
+        // console.log("userData: ", res.data);
         store.dispatch({
             type: "USER_DATA",
             data: res.data.authData
@@ -51,7 +51,7 @@ const fetchUser = () => {
 const fetchBlog = () => {
     baseApi.get('/articles/')
     .then(res => {
-        console.log("fetch-response: ",res.data);
+        // console.log("fetch-response: ",res.data);
         store.dispatch({
             type: "BLOGS_LOADED",
             data: res.data
@@ -62,7 +62,7 @@ const fetchBlog = () => {
 const addBlog = (formData) => {
     baseApi.post(`/creator/articles`,formData)
     .then(res => {
-        console.log("blog-added-api-res: ", res.data);
+        // console.log("blog-added-api-res: ", res.data);
         store.dispatch({
             type: "BLOG_ADDED",
             data: res.data.postData

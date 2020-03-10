@@ -15,7 +15,7 @@ let rootReducers = combineReducers({
 const store  = createStore(rootReducers);
 
 store.subscribe(()=>{
-    console.log("dispatched-item: ",store.getState());
+    // console.log("dispatched-item: ",store.getState());
 })
 
 let stateMapper = state => {

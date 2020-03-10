@@ -24,18 +24,21 @@ function Footer() {
               <ul className="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                 <li>
                   <a href='https://twitter.com/'><img
+                  className='icon-img'
                     src="https://img.icons8.com/nolan/40/twitter.png"
                     alt="twitter"
                   /></a>
                 </li>
                 <li>
                 <a href='https://www.facebook.com/'><img
+                className='icon-img'
                     src="https://img.icons8.com/nolan/40/facebook-new.png"
                     alt="facebook"
                   /></a>
                 </li>
                 <li>
                 <a href='https://www.instagram.com/'><img
+                className='icon-img'
                     src="https://img.icons8.com/nolan/40/instagram-new.png"
                     alt="instagram"
                   /></a>
@@ -88,7 +91,7 @@ function Footer() {
                     <span className="icon">
                       <ion-icon name="call-outline"></ion-icon>
                     </span>
-                    <span className="text-light">+ 9199 8855 98</span>
+                    <span className="text-light">+ 9173 3741 6428</span>
                   </li>
                   <li>
                     <span className="icon">
@@ -113,7 +116,7 @@ function Footer() {
         </div>
         <div className="row">
           <div className="col-md-12 text-center text-secondary">
-            <p>Copyright &copy; All rights reserved | Gallivanter's Tale</p>
+            <p>Copyright &copy; All rights reserved | Gallivanter's Tale | Design and Developed By <span className='text-warning'><a className='text-warning'  style={{"textDecoration": "none"}} href='https://www.linkedin.com/in/sudhirkr23/'>Sudhir</a></span></p>
           </div>
         </div>
       </div>

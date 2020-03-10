@@ -28,7 +28,7 @@ function BlogBody(props) {
                     </div>
                     <Link
                       className="text-dark"
-                      style={{ "text-decoration": "none" }}
+                      style={{ "textDecoration": "none" }}
                       to={`/blogs/${blog.blogId}`}
                     >
                       <h3 className="heading mb-3 text-capitalize">

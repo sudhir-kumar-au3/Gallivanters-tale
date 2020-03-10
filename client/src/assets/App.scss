@@ -122,6 +122,22 @@ input,textarea{
     }
 }
 
+input[type="text"]:focus{
+    outline: none;
+    box-shadow:none !important;
+  }
+  
+
+  button:focus{
+    outline: none;
+    box-shadow:none !important;
+  }
+  
+.navbar-toggler-icon{
+    // background-color: #ffd369 !important;
+    border-radius: 5px;
+}    
+
 .blog-entry{
     overflow: hidden;
 }

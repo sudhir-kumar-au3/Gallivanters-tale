@@ -33,7 +33,7 @@ function HomeBlog(props, { url = String(window.location) }) {
                       <div className="text w-100 pl-md-3">
                         <Link
                           to={`/blogs/${blog.blogId}`}
-                          style={{ "text-decoration": "none" }}
+                          style={{ "textDecoration": "none" }}
                         >
                           <h2 className="text-capitalize blog-title">{blog.title}</h2>
                         </Link>
@@ -45,7 +45,7 @@ function HomeBlog(props, { url = String(window.location) }) {
                             >
                               <img
                                 className="icon-share"
-                                src="https://img.icons8.com/nolan/54/facebook.png"
+                                src="https://img.icons8.com/nolan/48/facebook.png"
                                 alt="facebook"
                               ></img>
                             </FacebookShareButton>
@@ -56,7 +56,7 @@ function HomeBlog(props, { url = String(window.location) }) {
                             >
                               <img
                                 className="icon-share"
-                                src="https://img.icons8.com/nolan/54/linkedin.png"
+                                src="https://img.icons8.com/nolan/48/linkedin.png"
                                 alt="linkedin"
                               ></img>
                             </LinkedinShareButton>
@@ -67,7 +67,7 @@ function HomeBlog(props, { url = String(window.location) }) {
                             >
                               <img
                                 className="icon-share"
-                                src="https://img.icons8.com/nolan/54/twitter-squared.png"
+                                src="https://img.icons8.com/nolan/48/twitter-squared.png"
                                 alt="twitter"
                               ></img>
                             </TwitterShareButton>

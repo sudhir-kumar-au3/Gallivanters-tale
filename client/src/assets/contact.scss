@@ -1,0 +1,25 @@
+input {
+  padding: 5px;
+  margin: 5px;
+  width: 100%;
+  outline: 0;
+  border-width: 0 0 1px;
+  border-color: lightgray;
+}
+
+textarea {
+  padding: 5px;
+  margin: 5px;
+  width: 100%;
+  outline: 0;
+  border-width: 0 0 1px;
+  border-color: lightgray;
+
+  &:focus {
+    border-color: black;
+  }
+}
+
+input:focus {
+  border-color: black;
+}
