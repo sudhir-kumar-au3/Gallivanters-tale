@@ -1,9 +1,23 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { NavLink, Link } from "react-router-dom";
 function NavBar() {
+  let [pos, setPos] = useState(window.pageYOffset);
+  let [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      let temp = window.pageYOffset;
+      setVisible(pos > temp);
+      setPos(temp)
+    };
+    window.addEventListener("scroll", handleScroll);
+    return (() => {
+      window.removeEventListener("scroll", handleScroll)
+    })
+  })
   return (
     <React.Fragment>
-      <nav className="navbar navbar-default sticky-top  ftco-navbar-light navbar-expand-lg navbar-dark bg-dark">
+      <nav className={"navbar navbar-default ftco-navbar-light navbar-expand-lg navbar-dark bg-light " + (!visible ? "navbarHidden":" ")}>
         <div className="container">
           <Link className="navbar-brand text-white font-weight-bolder" to="/">
             Gallivanter's <i>Tale</i>
@@ -25,7 +39,7 @@ function NavBar() {
                 <NavLink
                   activeClassName="active"
                   className="nav-link text-white"
-                  to="/"
+                  exact to="/"
                 >
                   Home
                 </NavLink>

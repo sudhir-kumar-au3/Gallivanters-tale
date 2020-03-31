@@ -1,7 +1,7 @@
 import { fetchBlog} from '../../services/apiCalls';
-const BlogReducer = (blogData = [], action) => {
+const BlogReducer = (blogData = {}, action) => {
     if(action.type === "FETCH_BLOGS"){
-        fetchBlog();
+        fetchBlog(action.page);
     }
     if(action.type === "BLOGS_LOADED"){
         blogData = action.data;

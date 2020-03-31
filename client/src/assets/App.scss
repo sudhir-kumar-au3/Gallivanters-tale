@@ -17,6 +17,7 @@ $input-border: lightgrey;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
+    background-attachment: fixed;
   
     .overlay {
       position: absolute;
@@ -33,10 +34,7 @@ $input-border: lightgrey;
     max-width: 1210px;
 }
 
-.activeClassName{
-    font-weight: bolder;
-    color: #ffd369 !important;
-}
+
 // input fields
 input,textarea{
     width: 100%;
@@ -137,7 +135,12 @@ input[type="text"]:focus{
     // background-color: #ffd369 !important;
     border-radius: 5px;
 }    
-
+.p-body{
+    display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
 .blog-entry{
     overflow: hidden;
 }
@@ -223,6 +226,37 @@ input[type="text"]:focus{
 .cover-img:hover{
     filter: brightness(90%) !important;
 }
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+.block-pagination ul {
+    padding: 0;
+    margin: 0;
+}
+.block-pagination ul li a, .block-pagination ul li span {
+    color: gray;
+    text-align: center;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    border: 1px solid #e6e6e6;
+}
+.block-pagination ul li {
+    display: inline-block !important;
+    margin-bottom: 4px !important;
+    font-weight: 400 !important;
+}
+.active {
+    border-bottom: 2px solid white;
+ }
 @media (max-width: 1199.98px){
 .case .text .media-social {
     opacity: 1;
@@ -237,10 +271,14 @@ input[type="text"]:focus{
 @media screen and (max-width: 756px){
 .ftco-navbar-light {
     background: #000!important;
-    position: relative;
+    position: sticky;
     top: 0;
 }
 .blog-entry{
     margin-bottom: 30px;
 }
+.active {
+    color: #ffd369 !important;
+    border: none;
+ }
 }

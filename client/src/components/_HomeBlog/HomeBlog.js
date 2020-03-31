@@ -8,14 +8,15 @@ import {
   LinkedinShareButton
 } from "react-share";
 import { Link } from "react-router-dom";
+import Loading from "../_Loading/Loading";
 
 function HomeBlog(props, { url = String(window.location) }) {
   return (
     <div className="container">
       <div className="row">
         <div className="col-md-12">
-          {props.blogData.length > 0 ? (
-            props.blogData.map(blog => {
+          {props.blogData && props.blogData.pageOfData ? (
+            props.blogData.pageOfData.map(blog => {
               let time = moment(blog.updatedAt).format("DD/MM/YYYY");
               return (
                 <div className="case" key={blog.blogId}>
@@ -83,12 +84,8 @@ function HomeBlog(props, { url = String(window.location) }) {
               );
             })
           ) : (
-            <div className="d-flex justify-content-center">
-              <div className="spinner-border text-center" role="status">
-                <span className="sr-only">Loading...</span>
-              </div>
-            </div>
-          )}
+              <Loading></Loading>
+         )}
         </div>
       </div>
     </div>

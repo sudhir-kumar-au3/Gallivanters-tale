@@ -1,23 +1,21 @@
-const {Creator, BlogPost, Comment, Image}  = require('../db/dbConfig');
-
+const {Creator, BlogPost, Comment}  = require('../db/dbConfig');
+const paginate = require('jw-paginate')
 const getAllBlog = (req,res) =>{
-    if(req.params.userId){
-        BlogPost.findAll({
-            include:[
-                {
-                    model: Creator,
-                    where: {
-                        id: req.params.userId
-                    },
-                    model: Comment
-                }
-            ],
-            order: [['updatedAt', 'DESC']]
+    console.log("userId: ", req.params.blogId)
+    if(req.params.blogId){
+        BlogPost.findOne({
+            where: {
+                blogId: req.params.blogId
+            },
+            include:[Creator, Comment]
         })
         .then(data => {
-            if(data.length > 0)
+            if(data){
                 res.json(data)
-            else res.json("error: no response")
+            }
+            else{
+                res.json("error: no response")
+            }
         })
         .catch(error => {
             res.status(500).json({error: error.message})
@@ -29,28 +27,18 @@ const getAllBlog = (req,res) =>{
             order: [['updatedAt', 'DESC']]
         })
         .then(data => {
-            res.json(data)
+            const page = parseInt(req.query.page) || 1;
+            const pageSize = 9;
+            const pager = paginate(data.length, page, pageSize);
+            const pageOfData = data.slice(pager.startIndex, pager.endIndex + 1);
+            console.log(pager);
+            res.json({pager, pageOfData})
         })
         .catch(error => {
             res.status(500).json({error: error.message})
         })
     }
 }
-const getOneBlog = (req, res) => {
-    const blogId = req.params;
-    console.log(blogId);
-    BlogPost.findOne({
-        where: {blogId: blogId},
-        include:[Creator,Comment, Image]
-    })
-    .then(blogData => {
-        res.json(blogData)
-    })
-    .catch(error => {
-        res.status(500).json({error: error.message})
-    })
-}
 module.exports = {
-    getAllBlog,
-    getOneBlog
+    getAllBlog
 }

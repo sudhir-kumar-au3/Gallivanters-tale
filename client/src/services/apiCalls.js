@@ -48,8 +48,8 @@ const fetchUser = () => {
     })
     .catch(error => console.log("error: ", error));
 }
-const fetchBlog = () => {
-    baseApi.get('/articles/')
+const fetchBlog = (page) => {
+    baseApi.get(`/articles?page=${page}`)
     .then(res => {
         // console.log("fetch-response: ",res.data);
         store.dispatch({
@@ -58,6 +58,16 @@ const fetchBlog = () => {
         })
     })
     .catch(error => console.log("error: ", error));
+}
+const fetchSinglePost = (blogId) => {
+    baseApi.get(`/articles/${blogId}`)
+    .then(res => {
+        // console.log("single-post: ", res.data);
+        store.dispatch({
+            type: "SINGLE_POST_FETCHED",
+            data: res.data
+        })
+    })
 }
 const addBlog = (formData) => {
     baseApi.post(`/creator/articles`,formData)
@@ -75,5 +85,6 @@ export {
     loginUser,
     fetchBlog,
     fetchUser,
+    fetchSinglePost,
     addBlog
 }
